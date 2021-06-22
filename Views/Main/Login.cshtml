@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+    <div class="col-4 offset-4">
+
+        <div class="card" style="margin-top:50%; margin-bottom:50%">
+            <div class="card-header">Logged as</div>
+            <div class="card-body">
+                <div class="btn btn-block" style="background-color:cornflowerblue" data-toggle="tooltip" data-placement="right" title="Logged as user">
+                    <i class="fas fa-user"></i>
+                    @Html.ActionLink("User", "Login", "User", null, new { style = "text-decoration:none", @class = "text-light" })
+                </div>
+                <div class="btn btn-block" style="background-color: #e65353" data-toggle="tooltip" data-placement="right" title="Logged as admin">
+                    <i class="fas fa-user-cog"></i>
+                    @Html.ActionLink("Admin", "Login", "Admin", null, new { style = "text-decoration:none", @class = "text-light" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
