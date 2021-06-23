@@ -14,7 +14,7 @@ namespace LibraryMSMVC.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    
+    //using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class tblUser
     {
@@ -40,7 +40,9 @@ namespace LibraryMSMVC.Models
         [DisplayName("Email Address")]
         public string UserEmail { get; set; }
         [Required]
-        [StringLength(15, MinimumLength = 8, ErrorMessage = "The Password field must be atleast 8 character long")]
+        [StringLength(15, MinimumLength = 8, ErrorMessage = "The Password field must be atleast 8 characters long")]
+        //[RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@*#])[A-Za-z0-9@*#]{8,}$", ErrorMessage = "Password must contain atleast 1 uppercase, lowercase and special character(@,*,#)")]
+        [RegularExpression("[0-9]{4}", ErrorMessage = "Invalid Password")]
         [DisplayName("Password")]
         public string UserPass { get; set; }
     }

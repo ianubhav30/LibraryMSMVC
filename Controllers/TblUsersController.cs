@@ -69,7 +69,8 @@ namespace LibraryMSMVC.Controllers
                     Session["operationMsg"] = "User added successfully";
                     userDb.tblUsers.Add(tblUser);
                     userDb.SaveChanges();
-                    return RedirectToAction("Index");
+                    //return RedirectToAction("Index");
+                    return RedirectToAction("Home", "Main");
                 }
             }
 
@@ -150,5 +151,6 @@ namespace LibraryMSMVC.Controllers
             }
             base.Dispose(disposing);
         }
+        
     }
 }

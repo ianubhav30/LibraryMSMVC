@@ -25,8 +25,7 @@ namespace LibraryMSMVC.App_Start
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/custom.css"));
+                      "~/Content/site.css"));
         }
     }
 }

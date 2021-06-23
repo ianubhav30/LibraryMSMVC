@@ -21,7 +21,7 @@
             <div class="col">
                 @Html.LabelFor(model => model.BookTitle, htmlAttributes: new { @class = "control-label" })
 
-                @Html.EditorFor(model => model.BookTitle, new { htmlAttributes = new { @class = "form-control ", placeholder = "Catch Me If You Can" } })
+                @Html.EditorFor(model => model.BookTitle, new { htmlAttributes = new { @class = "form-control ", placeholder = "Book Name" } })
                 @Html.ValidationMessageFor(model => model.BookTitle, "", new { @class = "text-danger" })
 
             </div>
@@ -45,7 +45,7 @@
             <div class="col">
                 @Html.LabelFor(model => model.BookAuthor, htmlAttributes: new { @class = "control-label" })
 
-                @Html.EditorFor(model => model.BookAuthor, new { htmlAttributes = new { @class = "form-control", placeholder = "Frank Abagnale Jr" } })
+                @Html.EditorFor(model => model.BookAuthor, new { htmlAttributes = new { @class = "form-control", placeholder = "Author Name" } })
                 @Html.ValidationMessageFor(model => model.BookAuthor, "", new { @class = "text-danger" })
 
             </div>
@@ -62,7 +62,7 @@
             <div class="col">
                 @Html.LabelFor(model => model.BookPub, htmlAttributes: new { @class = "control-label" })
 
-                @Html.EditorFor(model => model.BookPub, new { htmlAttributes = new { @class = "form-control", placeholder = "Grosset & Dunlap" } })
+                @Html.EditorFor(model => model.BookPub, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Book Publisher" } })
                 @Html.ValidationMessageFor(model => model.BookPub, "", new { @class = "text-danger" })
 
             </div>
@@ -70,7 +70,7 @@
             <div class="col">
                 @Html.LabelFor(model => model.BookPubName, htmlAttributes: new { @class = "control-label" })
 
-                @Html.EditorFor(model => model.BookPubName, new { htmlAttributes = new { @class = "form-control", placeholder = "Hunted Forger" } })
+                @Html.EditorFor(model => model.BookPubName, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Publisher Name" } })
                 @Html.ValidationMessageFor(model => model.BookPubName, "", new { @class = "text-danger" })
 
             </div>
@@ -87,7 +87,7 @@
             <div class="col">
                 @Html.LabelFor(model => model.Copyright, htmlAttributes: new { @class = "control-label" })
 
-                @Html.EditorFor(model => model.Copyright, new { htmlAttributes = new { @class = "form-control", placeholder = "1980" } })
+                @Html.EditorFor(model => model.Copyright, new { htmlAttributes = new { @class = "form-control", placeholder = "Copyright Year" } })
                 @Html.ValidationMessageFor(model => model.Copyright, "", new { @class = "text-danger" })
 
             </div>

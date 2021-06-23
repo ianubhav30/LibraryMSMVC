@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using LibraryMSMVC.Models;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace LibraryMSMVC.Controllers
 {
@@ -57,9 +58,13 @@ namespace LibraryMSMVC.Controllers
 
         // Admin logout, redirect to main. 
         [HandleError]
+        [System.Web.Mvc.OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult Logout()
         {
+            FormsAuthentication.SignOut();
             Session.Remove("adminId");
+            Session.RemoveAll();
+            Session.Abandon();
             return RedirectToAction("Home", "Main");
         }
     }
