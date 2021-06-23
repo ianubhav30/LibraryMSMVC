@@ -19,12 +19,6 @@ namespace LibraryMSMVC.Controllers
         {
             return View(bookDb.tblBooks.ToList());
         }
-
-        /*public ActionResult Index1()
-        {
-            return View(bookDb.tblBooks.ToList());
-        }
-        */
         // GET: tblBooks Json
         public ActionResult GetAll()
         {

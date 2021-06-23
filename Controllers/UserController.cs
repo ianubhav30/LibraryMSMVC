@@ -59,7 +59,6 @@ namespace LibraryMSMVC.Controllers
         */
 
         // User logout, redirect to main. 
-        [System.Web.Mvc.OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult Logout()
         {
             Session.Remove("userId");

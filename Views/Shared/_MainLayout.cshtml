@@ -4,18 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - LMS</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/fontawesome-all.css" rel="stylesheet" />
     <link href="~/Content/lmscustom.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/Content/custom.css" rel="stylesheet" />
 </head>
 <body style="padding:unset">
-    <div>
-        <div style="background-color:#d9534f;">
-            <div style="background-color:#292b2c; height:8px; width:450px">
-            </div>
-        </div>
+   
+    <div class="d-flex flex-column min-vh-100">
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <span class="icon">
                 <i class="fas fa-book-open"></i>
@@ -28,62 +27,41 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item btn-sm btn-dark">
-                        <i class="fas fa-home"></i>
-                        @Html.ActionLink("Home", "Home", "Main", new { area = "" }, new { @class = "nav-link icon", style="display:inline" })
+                        @*<i class="fas fa-home"></i>*@
+                        @Html.ActionLink("Home", "Home", "Main", new { @class = "nav-link icon", style = "display:inline" })
                     </li>
                     <li class="nav-item btn-sm btn-dark">
-                        <i class="fas fa-address-card"></i>
-                        @Html.ActionLink("About", "About", "Main", new { area = "" }, new { @class = "nav-link icon", style="display:inline" })
+                        @*<i class="fas fa-address-card"></i>*@
+                        @Html.ActionLink("About", "About", "Main", new { @class = "nav-link icon", style = "display:inline" })
                     </li>
                     <li class="nav-item btn-sm btn-dark">
-                        <i class="fas fa-id-badge"></i>
-                        @Html.ActionLink("Contact", "Contact", "Main", new { area = "" }, new { @class = "nav-link icon", style="display:inline" })
+                        @*<i class="fas fa-id-badge"></i>*@
+                        @Html.ActionLink("Contact", "Contact", "Main", new { @class = "nav-link icon", style = "display:inline" })
                     </li>
                 </ul>
 
                 <ul class="navbar-nav justify-content-end">
-                    @*<li class="" style="padding-left:5px; padding-top:5px; padding-bottom:5px;padding-right:10px">
-                        @Html.ActionLink("Books", "Index1", "TblBooks", new { area = "" }, new { @class = "nav-item btn-sm btn-primary text-light", style = "text-decoration:none;" })
-                    </li>*@
-                    <li class="btn btn-block btn-success">
+                    <li class="nav-item btn-sm btn-success" id="btn-round">
                         <i class="fas fa-sign-in-alt"></i>
-                        @Html.ActionLink("Login", "Login", "Main", new { area = "" }, new { @class = "nav-link icon", style = "display:inline" })
+                        @Html.ActionLink("Login", "Login", "Main", new { @class = "nav-link icon", style = "display:inline" })
                     </li>
                 </ul>
             </div>
         </nav>
-       
-    </div>
-    <div style="padding-left:20px; padding-right:20px;">
-        @RenderBody()
-    </div>
-    <div>
+
+        
+        <div class="flex-fill" >
+             @RenderBody()
+        </div>
+
         <footer>
             <div style="" class="card text-center text-white bg-dark">
                 <div class="card-header">
-                    Thank you for visiting us
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Social Platforms</h5>
-                    <div style="width: auto;" class="form-group">
-                        <span>
-                            <i class="fab fa-facebook-square"></i>
-                        </span>
-                        <span>
-                            <i class="fab fa-twitter-square"></i>
-                        </span>
-                        <span>
-                            <i class="fab fa-instagram"></i>
-                        </span>
-                    </div>
+                    Thank you for visiting us .
                 </div>
                 <p>&copy; @DateTime.Now.Year - LMS</p>
             </div>
         </footer>
-    </div>
-    <div style="background-color:#d9534f;">
-        <div style="background-color:#292b2c; height:8px; width:450px">
-        </div>
     </div>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
