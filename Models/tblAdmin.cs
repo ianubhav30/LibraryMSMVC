@@ -13,9 +13,12 @@ namespace LibraryMSMVC.Models
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class tblAdmin
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int AdminId { get; set; }
         public string AdminName { get; set; }
         [Required]

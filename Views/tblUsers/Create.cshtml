@@ -2,11 +2,11 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <br />
-@*<h4>Add user</h4>*@
+<h4>Add user</h4>
 <hr />
 @using (Html.BeginForm())
 {
@@ -97,9 +97,9 @@
 }
 <br />
 
-@*<div class="btn btn-sm btn-secondary" data-toggle='tooltip' title='Back to user list'>
+<div class="btn btn-sm btn-secondary" data-toggle='tooltip' title='Back to user list'>
     <i class="fas fa-long-arrow-alt-left"></i>
     @Html.ActionLink("Back", "Index", null, new { @class = "", style = "text-decoration:none; color: white" })
-</div>*@
+</div>
 <br />
 <br />

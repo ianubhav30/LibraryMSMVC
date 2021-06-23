@@ -605,7 +605,6 @@ pre code {
 
 .row {
   display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -6627,6 +6626,7 @@ a.close.disabled {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
+  transform:translate(-100px);
 }
 
 @-webkit-keyframes spinner-border {
